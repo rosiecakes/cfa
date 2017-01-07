@@ -18,9 +18,13 @@ Up and Running
 ^^^^^^^^^^^^^^
 
     $ pip install -r requirements/local.txt
+    
     $ npm install
+    
     $ gem install compass
+    
     $ python manage.py runserver
+    
     $ gulp runServer browserSync
 
 
