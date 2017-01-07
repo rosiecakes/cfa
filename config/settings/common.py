@@ -14,6 +14,7 @@ import environ
 
 ROOT_DIR = environ.Path(__file__) - 3  # (cfa/config/settings/common.py - 3 = cfa/)
 APPS_DIR = ROOT_DIR.path('cfa')
+CMS_DIR = ROOT_DIR.path('cms')
 
 env = environ.Env()
 env.read_env()
@@ -44,8 +45,8 @@ THIRD_PARTY_APPS = (
 
 # Apps specific for this project go here.
 LOCAL_APPS = (
-    'cms',
     'cfa.users.apps.UsersConfig',
+    'cms',
     'wagtail.wagtailforms',
     'wagtail.wagtailredirects',
     'wagtail.wagtailembeds',
@@ -152,6 +153,7 @@ TEMPLATES = [
         # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
         'DIRS': [
             str(APPS_DIR.path('templates')),
+            # str(CMS_DIR.path('templates')),
         ],
         'OPTIONS': {
             # See: https://docs.djangoproject.com/en/dev/ref/settings/#template-debug
